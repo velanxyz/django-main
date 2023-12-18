@@ -8,6 +8,9 @@ def home(request):
 def FAQ(request):
     return render(request, 'FAQ.html')
 
+def about(request):
+    return render(request, 'about.html')
+
 def post(request):
     posts = Post.objects.all()
     return render(request, 'post.html', {'posts':posts})

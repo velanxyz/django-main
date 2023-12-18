@@ -5,10 +5,14 @@
 {% endblock %}
 
 {% block content %}
-<h1>это главная страница</h1>
+<h1>главная страница</h1>
 <br>
+{% if posts %}
 {% for i in posts %}
-    <h4>сложно(</h4>
-    <p>очень</p>
+    <h4>{{i.title}}</h4>
+    <p>{{i.post}}</p>
 {% endfor %}
+{% else %}
+<p>где посты</p>
+{% endif %}
 {% endblock %}
