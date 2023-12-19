@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+когда
+{% endblock %}
+
+{% block content %}
+<h1>когда</h1>
+<form method="post">
+    {% csrf_token %}
+    {{form.title}}
+    <br>
+    {{form.post}}
+    <button type="submit" class="btn btn-success">добавить  </button>
+</form>
+{% endblock %}
